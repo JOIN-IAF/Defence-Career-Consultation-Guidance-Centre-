@@ -12,43 +12,11 @@
 }
 
 body{
-    background:#050814;
+    background:#0b0f1a;
     color:#fff;
     overflow-x:hidden;
 }
 
-/* STAR BACKGROUND */
-.stars{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:transparent;
-    z-index:-2;
-}
-
-.stars::before,
-.stars::after{
-    content:"";
-    position:absolute;
-    width:200%;
-    height:200%;
-    background:radial-gradient(white 1px, transparent 1px);
-    background-size:50px 50px;
-    animation:moveStars 60s linear infinite;
-    opacity:0.15;
-}
-
-.stars::after{
-    animation-duration:120s;
-    opacity:0.08;
-}
-
-@keyframes moveStars{
-    from{transform:translateY(0px);}
-    to{transform:translateY(-1000px);}
-}
-
-/* NAV */
 nav{
     position:fixed;
     top:0;
@@ -57,16 +25,24 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:15px 25px;
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.6);
     backdrop-filter:blur(10px);
     z-index:1000;
 }
 
-nav h3{font-size:18px;}
-nav a{color:#fff;margin-left:15px;text-decoration:none;opacity:0.8;}
+nav h3{
+    font-size:18px;
+}
+
+nav a{
+    color:#fff;
+    margin-left:15px;
+    text-decoration:none;
+    opacity:0.8;
+}
+
 nav a:hover{opacity:1;}
 
-/* HERO */
 header{
     height:100vh;
     display:flex;
@@ -88,23 +64,12 @@ header::before{
 header h1{
     font-size:44px;
     z-index:1;
-    animation:fadeDown 1s ease;
 }
 
 .typing{
     margin-top:10px;
     font-size:16px;
     z-index:1;
-    border-right:2px solid #fff;
-    white-space:nowrap;
-    overflow:hidden;
-    width:0;
-    animation:typing 4s steps(40,end) forwards;
-}
-
-@keyframes typing{
-    from{width:0;}
-    to{width:320px;}
 }
 
 .hero-buttons{
@@ -119,15 +84,11 @@ header h1{
     border-radius:30px;
     text-decoration:none;
     font-weight:600;
-    transition:0.3s;
 }
-
-.hero-buttons a:hover{transform:scale(1.05);}
 
 .primary{background:#007bff;color:#fff;}
 .whatsapp{background:#25D366;color:#fff;}
 
-/* FLOAT BUTTON */
 .float{
     position:fixed;
     bottom:20px;
@@ -140,7 +101,6 @@ header h1{
     z-index:1000;
 }
 
-/* SECTIONS */
 section{
     max-width:1000px;
     margin:70px auto;
@@ -149,38 +109,24 @@ section{
     border:1px solid rgba(255,255,255,0.1);
     border-radius:15px;
     backdrop-filter:blur(12px);
-    transform:translateY(20px);
-    opacity:0;
-    animation:fadeUp 1s forwards;
+    transition:0.3s;
 }
 
-section:nth-child(1){animation-delay:0.2s;}
-section:nth-child(2){animation-delay:0.4s;}
-section:nth-child(3){animation-delay:0.6s;}
-section:nth-child(4){animation-delay:0.8s;}
-
-section:hover{transform:scale(1.02);}
-
-h2{font-size:28px;margin-bottom:10px;}
-p{line-height:1.8;opacity:0.9;}
-
-/* TESTIMONIALS */
-.testimonials{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+section:hover{
+    transform:translateY(-5px);
 }
 
-.card{
-    background:rgba(255,255,255,0.05);
-    padding:20px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,0.1);
+h2{
+    font-size:28px;
+    margin-bottom:10px;
 }
 
-.card h4{color:#25D366;margin-bottom:8px;}
+p{
+    line-height:1.9;
+    font-size:15px;
+    opacity:0.9;
+}
 
-/* FOOTER */
 footer{
     text-align:center;
     padding:25px;
@@ -188,19 +134,20 @@ footer{
     margin-top:50px;
 }
 
-footer a{color:#aaa;margin:0 8px;text-decoration:none;}
+footer a{
+    color:#aaa;
+    margin:0 8px;
+    text-decoration:none;
+}
+
 footer a:hover{color:#fff;}
 
-@keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
-@keyframes fadeUp{to{opacity:1;transform:translateY(0);opacity:1;}}
-
 </style></head>
-<body><div class="stars"></div><nav>
+<body><nav>
     <h3>Defence Guidance</h3>
     <div>
         <a href="#about">About</a>
-        <a href="#why">Why</a>
-        <a href="#test">Testimonials</a>
+        <a href="#why">Why Us</a>
         <a href="#contact">Contact</a>
     </div>
 </nav><header>
@@ -212,35 +159,38 @@ footer a:hover{color:#fff;}
     </div>
 </header><section id="about">
 <h2>About Us</h2>
-<p>We guide students with real strategy, discipline and motivation to crack Air Force X & Y Group exams with confidence.</p>
+<p>
+Defence Career Consultation & Guidance Centre ek initiative hai jiska aim hai rural aur semi-urban students ko proper direction dena jo Indian Air Force join karna chahte hain.
+<br><br>
+Main khud Air Force preparation ke environment aur struggle se guzra hoon, jahan maine dekha ki 12th ke baad students ke paas talent hota hai lekin proper guidance nahi hoti. Isi wajah se wo galat direction me chale jate hain ya time waste kar dete hain.
+<br><br>
+Is platform ke through main apna real experience share karta hoon taaki har student ko clear roadmap mile — kya padhna hai, kaise padhna hai, aur kis discipline se preparation karni hai.
+</p>
 </section><section id="why">
 <h2>Why Choose Us</h2>
-<p>We provide structured preparation, physical training guidance, written exam strategy and personal mentorship.</p>
-</section><section id="test">
-<h2>Student Testimonials</h2>
-<div class="testimonials">
-    <div class="card">
-        <h4>Aman</h4>
-        <p>“Sir ki guidance se mujhe clear direction mila aur confidence aaya.”</p>
-    </div>
-    <div class="card">
-        <h4>Ravi</h4>
-        <p>“Best mentorship for Air Force X Group. Highly recommended.”</p>
-    </div>
-    <div class="card">
-        <h4>Rahul</h4>
-        <p>“Confusion khatam ho gaya, ab proper preparation chal rahi hai.”</p>
-    </div>
-</div>
+<p>
+Bahut saare coaching sirf theory padhate hain, lekin yahan focus practical strategy aur real defence exam mindset par hai.
+<br><br>
+Main personally Air Force X Group preparation ke dauran jo mistakes aur challenges face kiye hain, unko use karke ek simple aur effective system banaya hai jisse students confuse nahi hote.
+<br><br>
+Yahan tumhe milega:
+<br>✔ Clear exam strategy
+<br>✔ Physical + written guidance
+<br>✔ Motivation based discipline system
+<br>✔ Real experience based mentorship
+<br><br>
+Hamara goal hai ki har student sirf padhai nahi kare, balki ek defence mindset develop kare.
+</p>
 </section><section id="contact">
-<h2>Contact Us</h2>
-<p>Join WhatsApp for instant updates and guidance.</p>
+<h2>Contact</h2>
+<p>
+Join WhatsApp for guidance, updates and preparation support.
+</p>
 </section><a class="float" href="https://wa.me/918858235844">💬</a>
 
 <footer>
 <p>Follow Us</p>
-<a href="https://www.facebook.com/share/1CbfVrFsrW/">Facebook</a>
-|
+<a href="https://www.facebook.com/share/1CbfVrFsrW/">Facebook</a> |
 <a href="https://www.instagram.com/join.iaf?igsh=MXQ5MDVyNXhmODI0cQ==">Instagram</a>
 </footer></body>
 </html>
