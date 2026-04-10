@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Defence Career Consultation & Guidance Centre</title><!-- Google Font --><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
+<title>Defence Career Consultation & Guidance Centre</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
 *{
     margin:0;
     padding:0;
@@ -12,78 +12,124 @@
 }
 
 body{
-    background:#f4f6f9;
-    color:#111;
+    background:#0b0f1a;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-/* HEADER */
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+nav h3{
+    font-size:18px;
+    color:#fff;
+}
+
+nav a{
+    color:#fff;
+    margin-left:15px;
+    text-decoration:none;
+    font-size:14px;
+    opacity:0.8;
+}
+
+nav a:hover{
+    opacity:1;
+}
+
+/* HERO */
 header{
-    position:relative;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:80px 20px;
-    color:white;
+    padding:20px;
     background:linear-gradient(90deg,#FF9933,#ffffff,#138808);
-    overflow:hidden;
+    position:relative;
 }
 
 header::before{
     content:"";
     position:absolute;
-    top:0;
-    left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.55);
+    background:rgba(0,0,0,0.65);
 }
 
 header h1{
-    position:relative;
-    font-size:38px;
-    font-weight:700;
-    letter-spacing:1px;
-    animation:fadeDown 1s ease-in-out;
+    font-size:42px;
+    z-index:1;
+    animation:fadeDown 1s ease;
 }
 
 header p{
-    position:relative;
     margin-top:10px;
     font-size:16px;
+    z-index:1;
     opacity:0.9;
 }
 
-.badge{
+.hero-buttons{
+    margin-top:20px;
+    z-index:1;
+}
+
+.hero-buttons a{
     display:inline-block;
-    margin-top:12px;
-    padding:6px 14px;
-    background:rgba(255,255,255,0.15);
-    border:1px solid rgba(255,255,255,0.3);
-    border-radius:20px;
-    font-size:12px;
+    margin:10px;
+    padding:12px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
 }
 
-/* CONTAINER */
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:20px;
+.primary{
+    background:#007bff;
+    color:#fff;
 }
 
+.whatsapp{
+    background:#25D366;
+    color:#fff;
+}
+
+/* FLOAT BUTTON */
+.float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    padding:15px;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    z-index:1000;
+}
+
+/* SECTION */
 section{
-    background:white;
+    max-width:1000px;
+    margin:60px auto;
     padding:25px;
-    margin:20px 0;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
     border-radius:15px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    backdrop-filter:blur(10px);
     transition:0.3s;
-    opacity:0;
-    transform:translateY(20px);
-    animation:fadeUp 0.8s forwards;
 }
-
-section:nth-child(1){animation-delay:0.2s;}
-section:nth-child(2){animation-delay:0.4s;}
-section:nth-child(3){animation-delay:0.6s;}
-section:nth-child(4){animation-delay:0.8s;}
 
 section:hover{
     transform:translateY(-5px);
@@ -91,133 +137,100 @@ section:hover{
 
 h2{
     font-size:26px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 p{
     line-height:1.8;
-    font-size:16px;
-    color:#333;
+    font-size:15px;
+    opacity:0.9;
 }
 
-img{
-    width:100%;
-    border-radius:12px;
-    margin-bottom:15px;
-    max-height:280px;
-    object-fit:cover;
-}
-
-/* BUTTONS */
-.btn{
-    display:block;
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
     text-align:center;
-    padding:15px;
-    margin:12px 0;
-    font-size:18px;
+}
+
+.stat-box{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
     border-radius:12px;
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    transition:0.3s;
 }
 
-.btn:hover{
-    transform:scale(1.05);
+.stat-box h3{
+    font-size:28px;
+    color:#25D366;
 }
 
-.register{
-    background:linear-gradient(135deg,#007bff,#0056d2);
-}
-
-.whatsapp{
-    background:linear-gradient(135deg,#25D366,#1da851);
-}
-
-/* FLOATING WHATSAPP BUTTON */
-.float-wa{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 18px;
-    border-radius:50px;
-    font-weight:600;
-    text-decoration:none;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-    z-index:999;
-}
-
+/* FOOTER */
 footer{
     text-align:center;
-    padding:20px;
-    background:#0f0f0f;
-    color:white;
-    margin-top:30px;
+    padding:25px;
+    background:#000;
+    margin-top:50px;
 }
 
 footer a{
-    color:#ccc;
+    color:#aaa;
+    margin:0 8px;
     text-decoration:none;
-    margin:0 5px;
 }
 
 footer a:hover{
-    color:white;
+    color:#fff;
 }
 
-@keyframes fadeUp{
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
+/* ANIMATIONS */
 @keyframes fadeDown{
-    from{
-        opacity:0;
-        transform:translateY(-20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{opacity:0; transform:translateY(-20px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
 </style></head>
-<body><header>
+<body><nav>
+    <h3>Defence Guidance</h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#why">Why Us</a>
+        <a href="#stats">Stats</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav><header>
     <h1>Defence Career Consultation & Guidance Centre</h1>
-    <p>Air Force X & Y Group Career Guidance | Discipline • Direction • Success</p>
-    <div class="badge">Rural Youth Empowerment Initiative</div>
-</header><div class="container"><section>
+    <p>Air Force X & Y Group | Discipline • Direction • Success</p>
+    <div class="hero-buttons">
+        <a href="https://forms.gle/KosUyvCoHKzXSaRr5" class="primary">Register Now</a>
+        <a href="https://wa.me/918858235844" class="whatsapp">Contact on WhatsApp</a>
+    </div>
+</header><section id="about">
 <h2>About Us</h2>
-<p>
-We guide students who dream of joining the Indian Air Force but lack proper direction. Our mission is to provide clear, practical mentorship so that every student can prepare with confidence and discipline.
-</p>
-</section><section>
-<h2>Why Join Us</h2>
-<img src="https://images.unsplash.com/photo-1581092919532-5b7f4c9d1e52">
-<p>
-Most students lose time due to confusion after 12th. We remove that confusion by providing structured guidance for Air Force X Group preparation with real strategy, not guesswork.
-</p>
-</section><section>
-<h2>What You Will Get</h2>
-<p>
-✔ Proper Air Force exam strategy<br>
-✔ Physical & written guidance<br>
-✔ Personal mentorship<br>
-✔ Motivation & discipline training
-</p>
-</section><section>
-<h2>About Mentor</h2>
-<p>
-This platform is built on real experience and understanding of defence exam preparation. The goal is to help serious students achieve success without wasting time.
-</p>
-</section></div><div class="container">
-<a href="https://forms.gle/KosUyvCoHKzXSaRr5" class="btn register">Register Now</a>
-<a href="https://wa.me/918858235844" class="btn whatsapp">Contact on WhatsApp</a>
-</div><a class="float-wa" href="https://wa.me/918858235844">💬 Chat</a>
+<p>We provide structured guidance for Air Force aspirants who lack proper direction after 12th. Our mission is to build disciplined and focused candidates for defence services.</p>
+</section><section id="why">
+<h2>Why Choose Us</h2>
+<p>We remove confusion with practical strategy, physical guidance, written preparation, and mentorship designed for Air Force X Group success.</p>
+</section><section id="stats">
+<h2>Our Impact</h2>
+<div class="stats">
+    <div class="stat-box">
+        <h3>500+</h3>
+        <p>Students Guided</p>
+    </div>
+    <div class="stat-box">
+        <h3>95%</h3>
+        <p>Success Focus System</p>
+    </div>
+    <div class="stat-box">
+        <h3>24/7</h3>
+        <p>Support Available</p>
+    </div>
+</div>
+</section><section id="contact">
+<h2>Contact</h2>
+<p>Join our WhatsApp for instant guidance and updates.</p>
+</section><a class="float" href="https://wa.me/918858235844">💬</a>
 
 <footer>
 <p>Follow Us</p>
