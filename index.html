@@ -20,13 +20,12 @@ body{
 header{
     position:relative;
     text-align:center;
-    padding:70px 20px;
+    padding:80px 20px;
     color:white;
     background:linear-gradient(90deg,#FF9933,#ffffff,#138808);
     overflow:hidden;
 }
 
-/* dark overlay for premium feel */
 header::before{
     content:"";
     position:absolute;
@@ -39,9 +38,10 @@ header::before{
 
 header h1{
     position:relative;
-    font-size:34px;
+    font-size:38px;
     font-weight:700;
     letter-spacing:1px;
+    animation:fadeDown 1s ease-in-out;
 }
 
 header p{
@@ -51,6 +51,16 @@ header p{
     opacity:0.9;
 }
 
+.badge{
+    display:inline-block;
+    margin-top:12px;
+    padding:6px 14px;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:20px;
+    font-size:12px;
+}
+
 /* CONTAINER */
 .container{
     max-width:1000px;
@@ -58,7 +68,6 @@ header p{
     padding:20px;
 }
 
-/* CARD STYLE SECTIONS */
 section{
     background:white;
     padding:25px;
@@ -66,11 +75,18 @@ section{
     border-radius:15px;
     box-shadow:0 8px 25px rgba(0,0,0,0.08);
     transition:0.3s;
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp 0.8s forwards;
 }
 
+section:nth-child(1){animation-delay:0.2s;}
+section:nth-child(2){animation-delay:0.4s;}
+section:nth-child(3){animation-delay:0.6s;}
+section:nth-child(4){animation-delay:0.8s;}
+
 section:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+    transform:translateY(-5px);
 }
 
 h2{
@@ -107,7 +123,7 @@ img{
 }
 
 .btn:hover{
-    transform:scale(1.03);
+    transform:scale(1.05);
 }
 
 .register{
@@ -118,12 +134,21 @@ img{
     background:linear-gradient(135deg,#25D366,#1da851);
 }
 
-/* HERO BUTTON ANIMATION */
-.btn:active{
-    transform:scale(0.98);
+/* FLOATING WHATSAPP BUTTON */
+.float-wa{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50px;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    z-index:999;
 }
 
-/* FOOTER */
 footer{
     text-align:center;
     padding:20px;
@@ -142,15 +167,22 @@ footer a:hover{
     color:white;
 }
 
-/* SMALL BADGE */
-.badge{
-    display:inline-block;
-    margin-top:10px;
-    padding:6px 12px;
-    background:rgba(255,255,255,0.15);
-    border:1px solid rgba(255,255,255,0.3);
-    border-radius:20px;
-    font-size:12px;
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 </style></head>
@@ -184,8 +216,10 @@ This platform is built on real experience and understanding of defence exam prep
 </p>
 </section></div><div class="container">
 <a href="https://forms.gle/KosUyvCoHKzXSaRr5" class="btn register">Register Now</a>
-<a href="https://wa.me/918858235844" class="btn whatsapp">Join WhatsApp Group</a>
-</div><footer>
+<a href="https://wa.me/918858235844" class="btn whatsapp">Contact on WhatsApp</a>
+</div><a class="float-wa" href="https://wa.me/918858235844">💬 Chat</a>
+
+<footer>
 <p>Follow Us</p>
 <a href="https://www.facebook.com/share/1CbfVrFsrW/">Facebook</a>
 |
