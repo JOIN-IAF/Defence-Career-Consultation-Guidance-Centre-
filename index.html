@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Defence Career Consultation & Guidance Centre | Air Force X & Y Group (Agniveer Vayu)</title>
+    <title>Defence Career Consultation & Guidance Centre | Air Force X & Y Group</title>
     <style>
         body {
             margin: 0;
@@ -20,7 +20,6 @@
             color: white;
             text-align: center;
             padding: 60px 20px;
-            background-size: cover;
         }
 
         header h1 {
@@ -30,10 +29,25 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.6);
         }
 
-        header p {
-            font-size: 1.3rem;
-            margin: 0;
-            opacity: 0.95;
+        .lang-switch {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .lang-btn.active {
+            background: #ff9933;
+            color: white;
+            font-weight: bold;
         }
 
         .container {
@@ -122,98 +136,158 @@
 </head>
 <body>
 
+<div class="lang-switch">
+    <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+    <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
+</div>
+
 <header>
-    <h1>Defence Career Consultation & Guidance Centre</h1>
-    <p>Turning Rural Dreams into Indian Air Force Careers • Special Focus on Agniveer Vayu (X & Y Group)</p>
+    <h1 id="title">Defence Career Consultation & Guidance Centre</h1>
+    <p id="tagline">Turning Rural Dreams into Indian Air Force Careers • Special Focus on Agniveer Vayu (X & Y Group)</p>
 </header>
 
 <div class="container">
 
     <section>
-        <h2>About Us</h2>
-        <p>
+        <h2 id="about-h2">About Us</h2>
+        <p id="about-text">
             At Defence Career Consultation & Guidance Centre, we guide motivated aspirants from Gangauli and nearby areas to successfully join the <strong>Indian Air Force Agniveer Vayu (X & Y Group)</strong>. Many 12th-pass students with good marks struggle due to lack of proper direction. We provide practical, experience-based mentorship so you don't waste time and can achieve your dream with confidence and discipline.
         </p>
     </section>
 
     <section>
-        <h2>Why Join Us</h2>
-        
-        <p>
+        <h2 id="why-h2">Why Join Us</h2>
+        <p id="why-text">
             Students from villages often face confusion after 12th due to limited guidance. We solve this by offering clear strategies, exam preparation tips, physical training advice, and real insights into the selection process. Our focus is saving your precious time and helping you succeed in Air Force X & Y Group recruitment.
         </p>
-        
         <div class="highlight">
-            <strong>Our Promise:</strong> Honest guidance, no false promises — only hard work + right direction = Success.
+            <strong id="promise">Our Promise:</strong> Honest guidance, no false promises — only hard work + right direction = Success.
         </div>
     </section>
 
     <section>
-        <h2>Eligibility for Air Force X & Y Group (Agniveer Vayu) 2026-27</h2>
-        <p><strong>Common Requirements (Dono Groups ke liye):</strong></p>
-        <ul>
-            <li><strong>Age:</strong> 17.5 to 21 years (confirm latest notification mein birth date)</li>
+        <h2 id="eligibility-h2">Eligibility for Air Force X & Y Group (Agniveer Vayu) 2026-27</h2>
+        <p id="common-req"><strong>Common Requirements (Both Groups):</strong></p>
+        <ul id="eligibility-list">
+            <li><strong>Age:</strong> 17.5 to 21 years (confirm in latest notification)</li>
             <li><strong>Gender:</strong> Unmarried Male / Female candidates</li>
             <li><strong>Physical Standards:</strong> Minimum height 152.5 cm, good medical fitness</li>
         </ul>
 
-        <p><strong>Educational Qualification:</strong></p>
-        <ul>
-            <li><strong>X Group (Technical Trades):</strong> 12th with Physics, Mathematics & English (minimum 50% aggregate + 50% in English)<br>
-                OR 3-year Diploma in Engineering with 50% marks</li>
-            <li><strong>Y Group (Non-Technical Trades):</strong> 12th in Any Stream with minimum 50% aggregate + 50% in English</li>
+        <p id="edu-qual"><strong>Educational Qualification:</strong></p>
+        <ul id="qual-list">
+            <li><strong>X Group (Technical):</strong> 12th with Physics, Maths & English (50% aggregate + 50% in English) OR 3-year Diploma</li>
+            <li><strong>Y Group (Non-Technical):</strong> 12th in Any Stream with 50% aggregate + 50% in English</li>
         </ul>
-        <p><em>Note: Hamesha latest official notification check karo — agnipathvayu.cdac.in ya careerairforce.gov.in pe.</em></p>
+        <p id="note"><em>Note: Always check the official notification on agnipathvayu.cdac.in or careerairforce.gov.in.</em></p>
     </section>
 
     <section>
-        <h2>Selection Process (Brief)</h2>
-        <p>
-            1. Online Written Exam (X Group: Physics, Maths, English | Y Group: English, Reasoning, GA)<br>
-            2. Physical Fitness Test (1.6 km run in \~6:30 min, Push-ups, Sit-ups, etc.)<br>
+        <h2 id="selection-h2">Selection Process (Brief)</h2>
+        <p id="selection-text">
+            1. Online Written Exam (X: Physics, Maths, English | Y: English, Reasoning, GA)<br>
+            2. Physical Fitness Test (1.6 km run in \~6:30 min, etc.)<br>
             3. Adaptability Tests<br>
             4. Medical Examination
         </p>
-        <p>We provide complete guidance for both <strong>X Group</strong> and <strong>Y Group</strong>.</p>
+        <p id="guidance-text">We provide complete guidance for both <strong>X Group</strong> and <strong>Y Group</strong>.</p>
     </section>
 
     <section>
-        <h2>About the Mentor</h2>
-        <p>
+        <h2 id="mentor-h2">About the Mentor</h2>
+        <p id="mentor-text">
             Guidance is based on real experience and practical knowledge of the Air Force selection system. The goal is to help hardworking rural students avoid common pitfalls and crack the X & Y Group through discipline, smart strategy, and dedication.
         </p>
     </section>
 
-    <!-- Contact Section -->
     <section>
-        <h2>Contact Us</h2>
+        <h2 id="contact-h2">Contact Us</h2>
         <div class="contact-box">
-            <p><strong>📍 Address:</strong> Gangauli, Ghazipur, Uttar Pradesh</p>
-            <p><strong>📞 WhatsApp:</strong> <a href="https://wa.me/918858235844" style="color:#25D366; text-decoration:none; font-weight:bold;">Click here to Contact on WhatsApp</a></p>
+            <p><strong>📍 Address:</strong> <span id="address">Gangauli, Ghazipur, Uttar Pradesh</span></p>
+            <p><strong>📞 WhatsApp:</strong> <a href="https://wa.me/918858235844" style="color:#25D366; text-decoration:none; font-weight:bold;" id="whatsapp-link">Click here to Contact on WhatsApp</a></p>
         </div>
     </section>
 
 </div>
 
 <div class="container">
-    <a href="https://forms.gle/KosUyvCoHKzXSaRr5" class="btn register">Register Now for Free</a>
-    <a href="https://wa.me/918858235844" class="btn whatsapp">Contact Us on WhatsApp</a>
+    <a href="https://forms.gle/KosUyvCoHKzXSaRr5" class="btn register" id="register-btn">Register Now for Free</a>
+    <a href="https://wa.me/918858235844" class="btn whatsapp" id="whatsapp-btn">Contact Us on WhatsApp</a>
 </div>
 
 <footer>
-    <p><strong>Follow Us for Latest Air Force Updates:</strong></p>
+    <p id="follow"><strong>Follow Us for Latest Air Force Updates:</strong></p>
     <p>
         <a href="https://www.facebook.com/share/1CbfVrFsrW/">Facebook</a> | 
         <a href="https://www.instagram.com/join.iaf?igsh=MXQ5MDVyNXhmODI0cQ==">Instagram</a>
     </p>
     
     <div class="copyright">
-        &copy; 2026 Defence Career Consultation & Guidance Centre, Gangauli, Ghazipur (UP). 
-        All Rights Reserved.<br>
-        <strong>Warning:</strong> This content is the intellectual property of the centre. 
-        Copying, reproducing, or using any part of this website without prior written permission is strictly prohibited.
+        &copy; 2026 Defence Career Consultation & Guidance Centre, Gangauli, Ghazipur (UP). All Rights Reserved.<br>
+        <strong>Warning:</strong> This content is the intellectual property of the centre. Copying without permission is strictly prohibited.
     </div>
 </footer>
+
+<script>
+    function switchLanguage(lang) {
+        // Remove active from both buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        
+        // Add active to selected
+        if (lang === 'en') {
+            document.querySelectorAll('.lang-btn')[0].classList.add('active');
+        } else {
+            document.querySelectorAll('.lang-btn')[1].classList.add('active');
+        }
+
+        if (lang === 'en') {
+            // English Content
+            document.getElementById('title').innerHTML = 'Defence Career Consultation & Guidance Centre';
+            document.getElementById('tagline').innerHTML = 'Turning Rural Dreams into Indian Air Force Careers • Special Focus on Agniveer Vayu (X & Y Group)';
+            document.getElementById('about-h2').innerHTML = 'About Us';
+            document.getElementById('about-text').innerHTML = 'At Defence Career Consultation & Guidance Centre, we guide motivated aspirants from Gangauli and nearby areas to successfully join the <strong>Indian Air Force Agniveer Vayu (X & Y Group)</strong>. Many 12th-pass students with good marks struggle due to lack of proper direction. We provide practical, experience-based mentorship so you don\'t waste time and can achieve your dream with confidence and discipline.';
+            document.getElementById('why-h2').innerHTML = 'Why Join Us';
+            document.getElementById('why-text').innerHTML = 'Students from villages often face confusion after 12th due to limited guidance. We solve this by offering clear strategies, exam preparation tips, physical training advice, and real insights into the selection process. Our focus is saving your precious time and helping you succeed in Air Force X & Y Group recruitment.';
+            document.getElementById('promise').innerHTML = 'Our Promise:';
+            document.getElementById('eligibility-h2').innerHTML = 'Eligibility for Air Force X & Y Group (Agniveer Vayu) 2026-27';
+            document.getElementById('common-req').innerHTML = '<strong>Common Requirements (Both Groups):</strong>';
+            document.getElementById('edu-qual').innerHTML = '<strong>Educational Qualification:</strong>';
+            document.getElementById('note').innerHTML = '<em>Note: Always check the official notification on agnipathvayu.cdac.in or careerairforce.gov.in.</em>';
+            document.getElementById('selection-h2').innerHTML = 'Selection Process (Brief)';
+            document.getElementById('mentor-h2').innerHTML = 'About the Mentor';
+            document.getElementById('contact-h2').innerHTML = 'Contact Us';
+            document.getElementById('register-btn').innerHTML = 'Register Now for Free';
+            document.getElementById('whatsapp-btn').innerHTML = 'Contact Us on WhatsApp';
+            document.getElementById('follow').innerHTML = '<strong>Follow Us for Latest Air Force Updates:</strong>';
+            document.getElementById('whatsapp-link').innerHTML = 'Click here to Contact on WhatsApp';
+        } else {
+            // Hindi Content
+            document.getElementById('title').innerHTML = 'डिफेंस करियर कंसल्टेशन एंड गाइडेंस सेंटर';
+            document.getElementById('tagline').innerHTML = 'गांव के सपनों को भारतीय वायु सेना में बदलना • अग्निवीर वायु (X & Y ग्रुप) पर विशेष फोकस';
+            document.getElementById('about-h2').innerHTML = 'हमारे बारे में';
+            document.getElementById('about-text').innerHTML = 'डिफेंस करियर कंसल्टेशन एंड गाइडेंस सेंटर में हम गंगौली और आस-पास के क्षेत्रों के महत्वाकांक्षी युवाओं को <strong>भारतीय वायु सेना अग्निवीर वायु (X & Y ग्रुप)</strong> में सफलतापूर्वक भर्ती होने के लिए मार्गदर्शन देते हैं। कई 12वीं पास छात्र अच्छे अंकों के बावजूद सही दिशा न मिलने के कारण भटक जाते हैं। हम व्यावहारिक और अनुभव-आधारित मेंटरशिप देते हैं ताकि आपका समय बर्बाद न हो और आप आत्मविश्वास व अनुशासन के साथ अपना सपना पूरा कर सकें।';
+            document.getElementById('why-h2').innerHTML = 'हमसे क्यों जुड़ें';
+            document.getElementById('why-text').innerHTML = 'गांव के छात्र अक्सर 12वीं के बाद सही गाइडेंस न मिलने के कारण confused हो जाते हैं। हम इस समस्या का समाधान करते हैं — सिलेबस की सही रणनीति, परीक्षा की तैयारी, शारीरिक ट्रेनिंग के टिप्स और चयन प्रक्रिया की असली जानकारी देकर। हमारा फोकस आपका कीमती समय बचाना और एयर फोर्स X & Y ग्रुप में सफलता दिलाना है।';
+            document.getElementById('promise').innerHTML = 'हमारा वादा:';
+            document.getElementById('eligibility-h2').innerHTML = 'एयर फोर्स X & Y ग्रुप (अग्निवीर वायु) 2026-27 के लिए योग्यता';
+            document.getElementById('common-req').innerHTML = '<strong>दोनों ग्रुप्स के लिए सामान्य शर्तें:</strong>';
+            document.getElementById('edu-qual').innerHTML = '<strong>शैक्षणिक योग्यता:</strong>';
+            document.getElementById('note').innerHTML = '<em>नोट: हमेशा आधिकारिक नोटिफिकेशन चेक करें — agnipathvayu.cdac.in या careerairforce.gov.in पर।</em>';
+            document.getElementById('selection-h2').innerHTML = 'चयन प्रक्रिया (संक्षेप में)';
+            document.getElementById('mentor-h2').innerHTML = 'मेंटर के बारे में';
+            document.getElementById('contact-h2').innerHTML = 'संपर्क करें';
+            document.getElementById('register-btn').innerHTML = 'फ्री में अभी रजिस्टर करें';
+            document.getElementById('whatsapp-btn').innerHTML = 'व्हाट्सएप पर संपर्क करें';
+            document.getElementById('follow').innerHTML = '<strong>नवीनतम एयर फोर्स अपडेट्स के लिए हमें फॉलो करें:</strong>';
+            document.getElementById('whatsapp-link').innerHTML = 'यहां क्लिक करके व्हाट्सएप पर संपर्क करें';
+        }
+    }
+
+    // Default language = Hindi (jaise pehle tha)
+    window.onload = function() {
+        switchLanguage('hi');
+    };
+</script>
 
 </body>
 </html>
